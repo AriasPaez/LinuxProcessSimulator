@@ -40,9 +40,6 @@ public class PCB extends Thread {
         cola_procesos.add(new Proceso(5, 1, 7000, "SSH"));
         cola_procesos.add(new Proceso(6, 1, 10000, "Calendar"));
 
-//        for(int i=0;i<cola_procesos.size();i++){
-//            System.out.println("proceso "+cola_procesos.get(i).getPID());
-//        }
     }
 
     @Override
@@ -51,8 +48,7 @@ public class PCB extends Thread {
         while (finalizar_programa) {
 
             try {
-                //new ProcessBuilder("cmd", "/c", "cls").inheritIO().start().waitFor();
-
+                
                 System.out.println("------------------------------------------------");
                 System.out.println(ANSI_BLACK + ANSI_WHITE_BACKGROUND + "PID\tPPID\tStatus \tTimeExe\tTimeRun\tCommand" + ANSI_RESET);
                 System.out.println("------------------------------------------------");

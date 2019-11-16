@@ -39,11 +39,11 @@ public class Menu extends Thread {
                         }
                     }
                 }
-                // pcb.getCola_procesos().add(new Proceso(33, 1, 0,"Zombie"));
+                
 
             }
             if (parts[0].equalsIgnoreCase("exit")) {
-                //pcb.getCola_procesos().add(new Proceso(34, 1, 0,"Exit"));
+                
                 System.exit(0);
             }
             if (parts[0].equalsIgnoreCase("sleep")) {
@@ -59,7 +59,7 @@ public class Menu extends Thread {
 
             }
             if (parts[0].equalsIgnoreCase("stopped")) {
-                //pcb.getCola_procesos().add(new Proceso(35, 1, 0,"Stopped"));
+                
                 if (parts.length == 2) {
                     for (int i = 0; i < pcb.getCola_procesos().size(); i++) {
                         if (parts[1].equals("" + pcb.getCola_procesos().get(i).getPID())) {
@@ -72,7 +72,7 @@ public class Menu extends Thread {
 
             }
             if (parts[0].equalsIgnoreCase("ready")) {
-                //pcb.getCola_procesos().add(new Proceso(36, 1, 0,"Ready"));
+                
                 if (parts.length == 2) {
                     for (int i = 0; i < pcb.getStop_procesos().size(); i++) {
                         if (parts[1].equals("" + pcb.getStop_procesos().get(i).getPID())) {
@@ -100,24 +100,21 @@ public class Menu extends Thread {
                     }
 
                 }
-//Add 9 4 20000 Hola
-//Add 10 4 20000 Hola2
-                // pcb.getCola_procesos().add(new Proceso(37, 1, 0,"Add"));
+
             }
             if (parts[0].equalsIgnoreCase("kill")) {
                 if (parts.length == 2) {
                     for (int i = 0; i < pcb.cola_procesos.size(); i++) {
                         if (parts[1].equals("" + pcb.cola_procesos.get(i).getPID())) {
                             pcb.cola_procesos.get(i).setStatus(statusProceso.Ended.toString());
-                            //pcb.stop_procesos.add(pcb.cola_procesos.get(i));
-
+                            
                             pcb.cola_procesos.remove(i);
                         }
                     }
                     for (int i = 0; i < pcb.cola_procesos.size(); i++) {
                         if (parts[1].equals("" + pcb.cola_procesos.get(i).getPPID())) {
                             pcb.cola_procesos.get(i).setStatus(statusProceso.Zombie.toString());
-                            //pcb.stop_procesos.add(pcb.cola_procesos.get(i));
+                            
                             pcb.stop_procesos.add(pcb.cola_procesos.get(i));
                             pcb.cola_procesos.remove(i);
                         }
@@ -125,7 +122,7 @@ public class Menu extends Thread {
                     for (int i = 0; i < pcb.stop_procesos.size(); i++) {
                         if (parts[1].equals("" + pcb.stop_procesos.get(i).getPPID())) {
                             pcb.stop_procesos.get(i).setStatus(statusProceso.Zombie.toString());
-                            //pcb.stop_procesos.add(pcb.cola_procesos.get(i));                            
+                                                     
                         }
                     }
                 }
@@ -135,18 +132,3 @@ public class Menu extends Thread {
     }
 
 }
-//            try {
-//                System.out.println("\n\n\n*******************************************\n"
-//                        + "**SIMULADOR DE ESTADOS DE PROCESOS LINUX**\n\n"
-//                        + "*******************************************\n\n"
-//                        + "***(1) Agregar Proceso.\n"
-//                        + "***(2).\n"
-//                        + "***(3).\n"
-//                        + "***(4).\n"
-//                        + "***(5) Finalizar Programa.\n\n"
-//                        + "");
-//                Thread.sleep(1000);
-//            } catch (InterruptedException ex) {
-//                Logger.getLogger(PCB.class.getName()).log(Level.SEVERE, null, ex);
-//            }
-

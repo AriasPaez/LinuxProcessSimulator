@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package Run;
 
 import model.Menu;
@@ -35,27 +30,7 @@ public class Prueba {
 
         menu.start();
         pcb.start();
-//        Proceso proceso1 = new Proceso(1, 1,500);
-//        Proceso proceso2 = new Proceso(2, 1,500);
-//
-//        proceso1.start();
-//        Thread.sleep(100);
-//        proceso1.stopProceso();
-//
-//        proceso2.start();
-//        proceso2.stopProceso();
-//        cronometro cron = new cronometro(10);
-//        System.out.println("Comenzo");
-//        cron.start();
-//        Thread.sleep(2000);
-//        System.out.println("Para");
-//        cron.stop();
-//        Thread.sleep(2000);
-//        System.out.println("Volvio");
-//        cron.restart();
-//        Thread.sleep(2000);
-//        System.out.println("Paro 2");
-//        cron.stop();
+
     }
 
 }
